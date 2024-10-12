@@ -7,9 +7,9 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip
 COPY setup.py requirements.txt /app
 RUN pip install -r requirements.txt
+RUN python -m unidic download
 COPY . /app
 RUN pip install -e .
-RUN python -m unidic download
 RUN python melo/init_downloads.py
 
 CMD ["python", "./melo/app.py", "--host", "0.0.0.0", "--port", "8888"]
