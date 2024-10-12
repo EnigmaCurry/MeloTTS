@@ -1,3 +1,5 @@
+botocore>=1.35.39
+cached_path>=1.6.2
 txtsplit
 torch
 torchaudio
@@ -26,5 +28,3 @@ langid==1.1.6
 tqdm
 tensorboard==2.16.2
 loguru==0.7.2
-botocore>=1.34.98
-cached_path>=1.6.2
